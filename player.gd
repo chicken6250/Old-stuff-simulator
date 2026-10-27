@@ -6,12 +6,14 @@ const JUMP_VELOCITY = 4.5
 
 @onready var neck: Node3D = $neck
 
-const MOUSE_SENS:float = 0.01
+const MOUSE_SENS:float = 0.02
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		var mouse_motion:Vector2 = event.relative
 		rotate_y(-(mouse_motion.x * MOUSE_SENS))
+		neck.rotate_x(-(mouse_motion.y * MOUSE_SENS))
+		neck.rotation.x = deg_to_rad(clamp(rad_to_deg(neck.rotation.x), -90 ,50))
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
