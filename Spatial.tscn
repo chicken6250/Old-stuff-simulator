@@ -8,6 +8,11 @@
 
 [node name="Node3D" type="Node3D" unique_id=1917464234]
 
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=382149958]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5907135, 0.07040414, -0.57438374)
+use_collision = true
+size = Vector3(0.72432303, 0.222747, 8.05142)
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1448253219]
 transform = Transform3D(-0.8091175, 0.58622116, 0.040909797, -0.5146881, -0.7405391, 0.43208566, 0.28359306, 0.32855228, 0.9009042, 0, 1.0043198, 2.5993392)
 shadow_enabled = true
@@ -29,8 +34,8 @@ transform = Transform3D(0.1, 0, 0, 0, 0.1, 1.7484556e-08, 0, -1.7484556e-08, 0.1
 shape = SubResource("2")
 
 [node name="neck" type="Node3D" parent="player" unique_id=1348787948]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06105113, -0.36310756, -1.1732769)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08578205, -0.6212197, -1.2109902)
 
 [node name="eyes" type="Camera3D" parent="player/neck" unique_id=1481595179]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0931758, 0.47205216, 1.0419171)
-fov = 50.15007
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09667875, 0.6900217, 1.0815077)
+near = 0.001
