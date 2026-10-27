@@ -1,27 +1,32 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene format=3 uid="uid://capbpmbe5cays"]
 
-[sub_resource type="CapsuleMesh" id=1]
+[ext_resource type="Script" uid="uid://djbcumt2e82sb" path="res://player.gd" id="1_gpild"]
 
-[sub_resource type="CapsuleShape" id=2]
+[sub_resource type="CapsuleMesh" id="1"]
 
-[node name="Spatial" type="Spatial"]
+[sub_resource type="CapsuleShape3D" id="2"]
 
-[node name="CSGBox" type="CSGBox" parent="."]
+[node name="Node3D" type="Node3D" unique_id=1917464234]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1448253219]
+transform = Transform3D(-0.8091175, 0.58622116, 0.040909797, -0.5146881, -0.7405391, 0.43208566, 0.28359306, 0.32855228, 0.9009042, 0, 1.0043198, 2.5993392)
+shadow_enabled = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1169872450]
 use_collision = true
-width = 6.01011
-height = 0.222747
-depth = 3.64301
+size = Vector3(16.9523, 0.222747, 21.1007)
 
-[node name="player" type="KinematicBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0931758, 0.560298, 0.0126855 )
+[node name="player" type="CharacterBody3D" parent="." unique_id=352339443]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0931758, 0.598149, 1.1933)
+script = ExtResource("1_gpild")
 
-[node name="MeshInstance" type="MeshInstance" parent="player"]
-transform = Transform( 0.1, 0, 0, 0, -4.37114e-09, -0.1, 0, 0.1, -4.37114e-09, 0, 0, 0 )
-mesh = SubResource( 1 )
+[node name="MeshInstance3D" type="MeshInstance3D" parent="player" unique_id=1224168840]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 1.7484556e-08, 0, -1.7484556e-08, 0.1, 0, 0, 0)
+mesh = SubResource("1")
 
-[node name="CollisionShape" type="CollisionShape" parent="player"]
-transform = Transform( 0.1, 0, 0, 0, -4.37114e-09, -0.1, 0, 0.1, -4.37114e-09, 0, 0, 0 )
-shape = SubResource( 2 )
+[node name="CollisionShape3D" type="CollisionShape3D" parent="player" unique_id=241281105]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 1.7484556e-08, 0, -1.7484556e-08, 0.1, 0, 0, 0)
+shape = SubResource("2")
 
-[node name="Camera" type="Camera" parent="player"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0918727, 0 )
+[node name="Camera3D" type="Camera3D" parent="player" unique_id=1481595179]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0918727, 0)
