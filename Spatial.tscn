@@ -29,7 +29,8 @@ transform = Transform3D(0.1, 0, 0, 0, 0.1, 1.7484556e-08, 0, -1.7484556e-08, 0.1
 shape = SubResource("2")
 
 [node name="neck" type="Node3D" parent="player" unique_id=1348787948]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0931758, -0.598149, -1.1933)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06105113, -0.36310756, -1.1732769)
 
 [node name="eyes" type="Camera3D" parent="player/neck" unique_id=1481595179]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0931758, 0.6900217, 1.1933)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0931758, 0.47205216, 1.0419171)
+fov = 50.15007
